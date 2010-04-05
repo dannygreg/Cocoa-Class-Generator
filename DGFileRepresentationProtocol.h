@@ -26,14 +26,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "DGFileRepresentationProtocol.h"
+//***************************************************************************
 
-@interface DGProtocol : NSObject <DGFileRepresentation>
+@protocol DGFileRepresentation  <NSObject>
 
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSArray /*NSString*/ *protocolList;
+- (NSString *)stringRepresentation;
 
-@property (nonatomic, copy) NSArray /*NSArray of DGProperties*/ *propertyGroups;
-@property (nonatomic, copy) NSArray /*NSArray of DGMethods*/ *methodGroups;
+@optional
+
+- (NSString *)headerRepresentation;
 
 @end

@@ -40,6 +40,7 @@
 		30B83DDE116A5AD1006448A9 /* DGClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGClass.m; sourceTree = "<group>"; };
 		30B83DE0116A5D77006448A9 /* DGProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGProtocol.h; sourceTree = "<group>"; };
 		30B83DE1116A5D77006448A9 /* DGProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGProtocol.m; sourceTree = "<group>"; };
+		30B83DF6116A6705006448A9 /* DGFileRepresentationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGFileRepresentationProtocol.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ClassGenerator-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ClassGenerator-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* ClassGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,6 +112,7 @@
 				29B97316FDCFA39411CA2CEA /* main.m */,
 				30B83DD7116A57AC006448A9 /* DGDeclarations.h */,
 				30B83DD8116A57AC006448A9 /* DGDeclarations.m */,
+				30B83DF6116A6705006448A9 /* DGFileRepresentationProtocol.h */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";

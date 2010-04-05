@@ -34,4 +34,26 @@
 @synthesize propertyGroups = _propertyGroups;
 @synthesize methodGroups = _methodGroups;
 
+- (NSString *)stringRepresentation
+{
+	NSString *protocolListString = [self.protocolList componentsJoinedByString:@", "];
+	NSMutableString *returnString = [NSMutableString stringWithFormat:@"@protocol %@<%@>\n\n", self.name, protocolListString];
+	
+	void (^appendStringRepresentationOfObject)(id) = ^ (id object) {
+		[returnString appendFormat:@"%@\n", [object stringRepresentation]];
+	};
+	
+	void (appendGroups)(NSArray *) = ^ (NSArray *groups) {
+		for (id item in groups) 
+			appendStringRepresentationOfObject(item);
+		[returnString appendString:@"\n\n"];
+	};
+	
+	appendGroups(self.propertyGroups);
+	appendGroups(self.methodGroups);
+	
+	[returnString appendString:@"@end"];
+	return returnString;
+}
+
 @end
