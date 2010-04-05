@@ -24,17 +24,14 @@
 
 //*******************************************************************************
 
-#import "DGProperty.h"
+#import "DGProtocol.h"
 
 
-@implementation DGProperty
+@implementation DGProtocol
 
-@synthesize type = _type;
-@synthesize setterSemantic = _setterSemantic;
-@synthesize atomic = _atomic;
-@synthesize readOnly = _readOnly;
-@synthesize synthesize = _synthesize;
-@synthesize getter = _getter;
-@synthesize setter = _setter;
+@synthesize name = _name;
+@synthesize protocolList = _protocolList;
+@synthesize propertyGroups = _propertyGroups;
+@synthesize methodGroups = _methodGroups;
 
 @end

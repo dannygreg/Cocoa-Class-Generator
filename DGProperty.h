@@ -42,6 +42,7 @@ typedef NSUInteger DGPropertySetterSemantic;
 @property (nonatomic) DGPropertySetterSemantic setterSemantic;
 @property (nonatomic) BOOL atomic;
 @property (nonatomic) BOOL readOnly;
+@property (nonatomic) BOOL synthesize;
 @property (nonatomic, copy) NSString *getter; // Can be nil
 @property (nonatomic, copy) NSString *setter; // Can be nil
 
