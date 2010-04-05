@@ -25,13 +25,3 @@
 //*******************************************************************************
 
 #import "DGDeclarations.h"
-
-#import <Cocoa/Cocoa.h>
-
-@interface DGMethod : NSObject 
-
-@property (nonatomic) DGType returnType;
-@property (nonatomic, assign) NSArray *paramaters;
-@property (nonatomic, copy) NSString *signature;
-
-@end

@@ -10,6 +10,8 @@
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* ClassGeneratorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* ClassGeneratorAppDelegate.m */; };
 		30B83DAF116A4AAE006448A9 /* DGMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B83DAE116A4AAE006448A9 /* DGMethod.m */; };
+		30B83DB3116A4C19006448A9 /* DGProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B83DB2116A4C19006448A9 /* DGProperty.m */; };
+		30B83DD9116A57AC006448A9 /* DGDeclarations.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B83DD8116A57AC006448A9 /* DGDeclarations.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -28,6 +30,10 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		30B83DAD116A4AAE006448A9 /* DGMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGMethod.h; sourceTree = "<group>"; };
 		30B83DAE116A4AAE006448A9 /* DGMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGMethod.m; sourceTree = "<group>"; };
+		30B83DB1116A4C19006448A9 /* DGProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGProperty.h; sourceTree = "<group>"; };
+		30B83DB2116A4C19006448A9 /* DGProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGProperty.m; sourceTree = "<group>"; };
+		30B83DD7116A57AC006448A9 /* DGDeclarations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGDeclarations.h; sourceTree = "<group>"; };
+		30B83DD8116A57AC006448A9 /* DGDeclarations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGDeclarations.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ClassGenerator-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ClassGenerator-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* ClassGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -51,6 +57,8 @@
 				256AC3D90F4B6AC300CF3369 /* ClassGeneratorAppDelegate.m */,
 				30B83DAD116A4AAE006448A9 /* DGMethod.h */,
 				30B83DAE116A4AAE006448A9 /* DGMethod.m */,
+				30B83DB1116A4C19006448A9 /* DGProperty.h */,
+				30B83DB2116A4C19006448A9 /* DGProperty.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -98,6 +106,8 @@
 			children = (
 				256AC3F00F4B6AF500CF3369 /* ClassGenerator_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				30B83DD7116A57AC006448A9 /* DGDeclarations.h */,
+				30B83DD8116A57AC006448A9 /* DGDeclarations.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -179,6 +189,8 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* ClassGeneratorAppDelegate.m in Sources */,
 				30B83DAF116A4AAE006448A9 /* DGMethod.m in Sources */,
+				30B83DB3116A4C19006448A9 /* DGProperty.m in Sources */,
+				30B83DD9116A57AC006448A9 /* DGDeclarations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,10 +223,12 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ClassGenerator_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "ClassGenerator-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = ClassGenerator;
@@ -226,9 +240,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ClassGenerator_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "ClassGenerator-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = ClassGenerator;

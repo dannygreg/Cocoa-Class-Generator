@@ -24,14 +24,16 @@
 
 //*******************************************************************************
 
-#import "DGDeclarations.h"
+#import "DGProperty.h"
 
-#import <Cocoa/Cocoa.h>
 
-@interface DGMethod : NSObject 
+@implementation DGProperty
 
-@property (nonatomic) DGType returnType;
-@property (nonatomic, assign) NSArray *paramaters;
-@property (nonatomic, copy) NSString *signature;
+@synthesize type = _type;
+@synthesize setterSemantic = _setterSemantic;
+@synthesize atomic = _atomic;
+@synthesize readOnly = _readOnly;
+@synthesize getter = _getter;
+@synthesize setter = _setter;
 
 @end

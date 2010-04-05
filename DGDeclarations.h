@@ -24,14 +24,14 @@
 
 //*******************************************************************************
 
-#import "DGDeclarations.h"
-
 #import <Cocoa/Cocoa.h>
 
-@interface DGMethod : NSObject 
+typedef struct _DGType {
+	NSString *name;
+	NSUInteger pointerLevel;
+} DGType;
 
-@property (nonatomic) DGType returnType;
-@property (nonatomic, assign) NSArray *paramaters;
-@property (nonatomic, copy) NSString *signature;
-
-@end
+typedef struct _DGParamater {
+	NSString *name;
+	DGType type;
+} DGParamater;

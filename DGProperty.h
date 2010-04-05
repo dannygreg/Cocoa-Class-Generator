@@ -28,10 +28,21 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface DGMethod : NSObject 
+enum _DGPropertySetterSemantic {
+	DGPropertySetterSemanticAssign = 0,
+	DGPropertySetterSemanticRetain = 1,
+	DGPropertySetterSemanticCopy = 2
+};
 
-@property (nonatomic) DGType returnType;
-@property (nonatomic, assign) NSArray *paramaters;
-@property (nonatomic, copy) NSString *signature;
+typedef NSUInteger DGPropertySetterSemantic;
+
+@interface DGProperty : NSObject 
+
+@property (nonatomic) DGType type;
+@property (nonatomic) DGPropertySetterSemantic setterSemantic;
+@property (nonatomic) BOOL atomic;
+@property (nonatomic) BOOL readOnly;
+@property (nonatomic, copy) NSString *getter; // Can be nil
+@property (nonatomic, copy) NSString *setter; // Can be nil
 
 @end
