@@ -12,6 +12,8 @@
 		30B83DAF116A4AAE006448A9 /* DGMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B83DAE116A4AAE006448A9 /* DGMethod.m */; };
 		30B83DB3116A4C19006448A9 /* DGProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B83DB2116A4C19006448A9 /* DGProperty.m */; };
 		30B83DD9116A57AC006448A9 /* DGDeclarations.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B83DD8116A57AC006448A9 /* DGDeclarations.m */; };
+		30B83DDF116A5AD1006448A9 /* DGClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B83DDE116A5AD1006448A9 /* DGClass.m */; };
+		30B83DE2116A5D77006448A9 /* DGProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B83DE1116A5D77006448A9 /* DGProtocol.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -34,6 +36,10 @@
 		30B83DB2116A4C19006448A9 /* DGProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGProperty.m; sourceTree = "<group>"; };
 		30B83DD7116A57AC006448A9 /* DGDeclarations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGDeclarations.h; sourceTree = "<group>"; };
 		30B83DD8116A57AC006448A9 /* DGDeclarations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGDeclarations.m; sourceTree = "<group>"; };
+		30B83DDD116A5AD1006448A9 /* DGClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGClass.h; sourceTree = "<group>"; };
+		30B83DDE116A5AD1006448A9 /* DGClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGClass.m; sourceTree = "<group>"; };
+		30B83DE0116A5D77006448A9 /* DGProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGProtocol.h; sourceTree = "<group>"; };
+		30B83DE1116A5D77006448A9 /* DGProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGProtocol.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ClassGenerator-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ClassGenerator-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* ClassGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -53,12 +59,9 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				30B83DDC116A5ABC006448A9 /* Model */,
 				256AC3D80F4B6AC300CF3369 /* ClassGeneratorAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* ClassGeneratorAppDelegate.m */,
-				30B83DAD116A4AAE006448A9 /* DGMethod.h */,
-				30B83DAE116A4AAE006448A9 /* DGMethod.m */,
-				30B83DB1116A4C19006448A9 /* DGProperty.h */,
-				30B83DB2116A4C19006448A9 /* DGProperty.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -131,6 +134,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		30B83DDC116A5ABC006448A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30B83DAD116A4AAE006448A9 /* DGMethod.h */,
+				30B83DAE116A4AAE006448A9 /* DGMethod.m */,
+				30B83DB1116A4C19006448A9 /* DGProperty.h */,
+				30B83DB2116A4C19006448A9 /* DGProperty.m */,
+				30B83DDD116A5AD1006448A9 /* DGClass.h */,
+				30B83DDE116A5AD1006448A9 /* DGClass.m */,
+				30B83DE0116A5D77006448A9 /* DGProtocol.h */,
+				30B83DE1116A5D77006448A9 /* DGProtocol.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,6 +209,8 @@
 				30B83DAF116A4AAE006448A9 /* DGMethod.m in Sources */,
 				30B83DB3116A4C19006448A9 /* DGProperty.m in Sources */,
 				30B83DD9116A57AC006448A9 /* DGDeclarations.m in Sources */,
+				30B83DDF116A5AD1006448A9 /* DGClass.m in Sources */,
+				30B83DE2116A5D77006448A9 /* DGProtocol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
