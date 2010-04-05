@@ -29,4 +29,8 @@
 
 @implementation DGMethod
 
+@synthesize returnType = _returnType;
+@synthesize paramaters = _paramaters;
+@synthesize signature = _signature;
+
 @end
